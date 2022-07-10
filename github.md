@@ -22,7 +22,7 @@ git config --global user.email "john.wayne@example.com"
 - open powershell or Visual Studio Code (``code .``)
 
 ## exclude files
-- create ``.gitingore`` to exclude files we dont wont to upload
+- create ``.gitingore`` to exclude files we dont want to upload
 - it can be temp or build files etc.
 
 ## create local repository
