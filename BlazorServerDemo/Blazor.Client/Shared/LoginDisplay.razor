@@ -1,0 +1,21 @@
+﻿@using Blazor.Shared.Models;
+@using Blazor.Shared.Interfaces;
+@inject IValuesService values;
+
+
+@message
+
+@code {
+    private string message = "You are not logged in";
+    private User? user;
+
+    protected override async Task OnInitializedAsync()
+    {
+        user = await values.GetLoggedInUser();
+
+        if (user?.IsAuthenticated == true)
+        {
+            message = user.DisplayName ?? "???";
+        }
+    }
+}

@@ -1,0 +1,4 @@
+- trying to learn and understand the Blazor stuff
+- this repo is public but it contains all my brain trash
+- how to use Blazor in enterprise intranet environment
+- how to cosume services in enterprise intranet environment
