@@ -12,7 +12,8 @@ S. Weihrauch
 # Current directory of build.ps
 Set-Location -Path $PSScriptRoot
 
-$version = Get-Date -Format "1.yy.M.d"
+# my format is: 1.22.7.10
+$version = Get-Date -Format "1.y.M.d"
 docker build -t blazorserverdemo:$version .
 docker save blazorserverdemo:$version -o .\image\blazorserverdemo.$version.tar
 

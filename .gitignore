@@ -4,3 +4,4 @@
 **/obj/
 **/Docker/image/
 **/Docker/publish/
+**/*.user
