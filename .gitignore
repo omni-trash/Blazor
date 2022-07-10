@@ -2,5 +2,5 @@
 **/.vs/
 **/bin/
 **/obj/
-**/Docker/image/*
-**/Docker/publish/*
+**/Docker/image/
+**/Docker/publish/
