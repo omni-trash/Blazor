@@ -2,13 +2,12 @@
 using Blazor.Shared.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Blazor.Server.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
+//[Authorize]
 public class ValuesController : ControllerBase
 {
     private readonly IValuesService values;
@@ -24,7 +23,7 @@ public class ValuesController : ControllerBase
     [Route("forecasts")]
     public async Task<IActionResult> Get(DateTime? date)
     {
-        logger.LogTrace("Get called");
+        logger.LogInformation(nameof(Get));
         DateTime startDate = date ?? DateTime.Now;
         WeatherForecast[] forecasts = await values.GetWeatherForecastsAsync(startDate);
         return Ok(forecasts);
@@ -34,7 +33,7 @@ public class ValuesController : ControllerBase
     [Route("user")]
     public async Task<IActionResult> GetLoggedInUser()
     {
-        logger.LogTrace("GetLoggedInUser called");
+        logger.LogInformation(nameof(GetLoggedInUser));
         User user = await values.GetLoggedInUser();
         return Ok(user);
     }

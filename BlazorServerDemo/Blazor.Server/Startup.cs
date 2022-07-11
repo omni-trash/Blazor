@@ -87,11 +87,7 @@ public class Startup
         app.UseBlazorFrameworkFiles();
         app.UseStaticFiles();
         app.UseRouting();
-
-        if (withAuthOption)
-        {
-            app.UseAuthorization();
-        }
+        app.UseAuthorization();
 
         // Swagger
         app.UseSwagger();
