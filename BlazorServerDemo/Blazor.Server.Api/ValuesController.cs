@@ -1,9 +1,10 @@
 ﻿using Blazor.Shared.Models;
 using Blazor.Shared.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Blazor.Server.Controllers;
+namespace Blazor.Server.Api;
 
 [Route("api/[controller]")]
 [ApiController]
