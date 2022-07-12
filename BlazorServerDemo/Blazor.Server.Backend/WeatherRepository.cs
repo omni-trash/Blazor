@@ -1,13 +1,19 @@
-﻿using Blazor.Server.Interfaces;
+﻿using Blazor.Server.Backend.Data;
+using Blazor.Server.Shared.Interfaces;
 using Blazor.Shared.Models;
 
-namespace Blazor.Server.Data;
+namespace Blazor.Server.Backend;
 
-public class Repository : IRepository
+public class WeatherRepository : IWeatherRepository
 {
     private readonly Database database;
 
-    public Repository(Database database)
+    public WeatherRepository(string connectionString)
+        : this(new Database(connectionString))
+    {
+    }
+
+    public WeatherRepository(Database database)
     {
         this.database = database;
     }

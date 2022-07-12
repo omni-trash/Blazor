@@ -1,7 +1,3 @@
-using Blazor.Shared.Interfaces;
-using Blazor.Server.Data;
-using Blazor.Server.Interfaces;
-using Blazor.Server.Services;
 using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;

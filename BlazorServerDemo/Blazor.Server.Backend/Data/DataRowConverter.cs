@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace Blazor.Server.Data;
+namespace Blazor.Server.Backend.Data;
 
 /// <summary>
 /// Converts a DataRow to another class instance, primarily used to convert derived DataRow to Plain Old CRL Object

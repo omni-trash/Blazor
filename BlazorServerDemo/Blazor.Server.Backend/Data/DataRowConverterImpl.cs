@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Reflection;
 
-namespace Blazor.Server.Data;
+namespace Blazor.Server.Backend.Data;
 
 /// <summary>
 /// Converts a DataRow to another class instance, cache some informations about TResult in static properties

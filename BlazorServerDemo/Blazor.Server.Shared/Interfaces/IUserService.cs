@@ -1,6 +1,6 @@
 ﻿using Blazor.Shared.Models;
 
-namespace Blazor.Server.Interfaces;
+namespace Blazor.Server.Shared.Interfaces;
 
 public interface IUserService
 {

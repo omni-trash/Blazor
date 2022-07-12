@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 
-namespace Blazor.Server.Data;
+namespace Blazor.Server.Backend.Data;
 
 public class Database
 {

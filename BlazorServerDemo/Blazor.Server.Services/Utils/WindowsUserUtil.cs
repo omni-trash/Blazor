@@ -2,7 +2,7 @@
 using System.DirectoryServices.AccountManagement;
 using System.Security.Principal;
 
-namespace Blazor.Server.Utils;
+namespace Blazor.Server.Services.Utils;
 
 public static class WindowsUserUtil
 {

@@ -1,6 +1,6 @@
-﻿using Blazor.Shared.Interfaces;
-using Blazor.Server.Data;
-using Blazor.Server.Interfaces;
+﻿using Blazor.Server.Backend;
+using Blazor.Shared.Interfaces;
+using Blazor.Server.Shared.Interfaces;
 using Blazor.Server.Services;
 using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.AspNetCore.Components;
@@ -59,13 +59,13 @@ public class Startup
         // Add scoped services to the container.
         //
 
-        services.AddScoped<IRepository>(sp =>
+        services.AddScoped<IWeatherRepository>(sp =>
         {
             string connectionString = this.Configuration.GetConnectionString("bob");
-            return new Repository(new Database(connectionString));
+            return new WeatherRepository(connectionString);
         });
 
-        services.AddScoped<IUserService,   UserService>();
+        services.AddScoped<IUserService>(sp => new UserService(sp.GetRequiredService<IHttpContextAccessor>()?.HttpContext?.User));
         services.AddScoped<IValuesService, ValuesService>();
     }
 
