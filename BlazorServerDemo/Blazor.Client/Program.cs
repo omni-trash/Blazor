@@ -22,7 +22,8 @@ public class Program
             };
         });
 
-        builder.Services.AddScoped<IValuesService, ValuesService>();
+        builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IWeatherService, WeatherService>();
 
         await builder.Build().RunAsync();
         //https://www.youtube.com/watch?v=AYXx5vPFzFo

@@ -66,7 +66,7 @@ public class Startup
         });
 
         services.AddScoped<IUserService>(sp => new UserService(sp.GetRequiredService<IHttpContextAccessor>()?.HttpContext?.User));
-        services.AddScoped<IValuesService, ValuesService>();
+        services.AddScoped<IWeatherService, WeatherService>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

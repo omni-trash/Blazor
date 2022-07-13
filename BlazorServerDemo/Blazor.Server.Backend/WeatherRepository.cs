@@ -27,7 +27,7 @@ public class WeatherRepository : IWeatherRepository
     {
         WeatherForecast[] result = Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
-            Date = startDate.AddDays(index),
+            Date = startDate.Date.AddDays(index),
             TemperatureC = Random.Shared.Next(-20, 55),
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         }).ToArray();

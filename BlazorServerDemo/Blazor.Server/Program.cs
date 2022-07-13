@@ -34,6 +34,36 @@ Standalone Blazor Client App (wasm)
 - no Server Infrastructure and Logic
 */
 
+/*
+           o
+          -|-
+          / \
+           |
+           | public
+           |
+           v
+#---------------#---------------#----------#
+| API           | Web           | Server   |
+| - Controllers | - Pages       |          |
+|               | - Shared      |          |
+#-------------------------------#          |
+| Services                      |          |
+| - Busines Logic (BL)          |          |
+#-------------------------------#          |
+| Backend                       |          |
+| - Repositories                |          |
+| - Data Access (DAL)           |          |
+#-------------------------------#----------#
+           |
+           | internal
+           |
+           v
+#-------------------------------#
+| Database                      |
+| - DBMS                        |
+#-------------------------------#
+ */
+
 namespace Blazor.Server;
 
 public class Program

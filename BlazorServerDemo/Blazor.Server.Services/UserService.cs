@@ -1,4 +1,4 @@
-﻿using Blazor.Server.Shared.Interfaces;
+﻿using Blazor.Shared.Interfaces;
 using Blazor.Shared.Models;
 using System.Security.Principal;
 
@@ -20,4 +20,6 @@ public class UserService : IUserService
             };
         }
     }
+
+    public Task<User> GetCurrentUserAsync() => Task.FromResult(CurrentUser);
 }

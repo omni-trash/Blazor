@@ -1,6 +1,6 @@
 ﻿@using Blazor.Shared.Models;
 @using Blazor.Shared.Interfaces;
-@inject IValuesService values;
+@inject IUserService userService;
 
 
 @message
@@ -11,7 +11,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        user = await values.GetLoggedInUser();
+        user = await userService.GetCurrentUserAsync();
 
         if (user?.IsAuthenticated == true)
         {
