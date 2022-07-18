@@ -48,19 +48,6 @@ git config --global user.email "john.wayne@example.com"
 
 ``git remote add origin https://github.com/omni-trash/Blazor.git``
 
-> TODO: Try to switch order next time, maybe it works and creates the remote repositoy from command line?
-
-```powershell
-# github says
-...
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/omni-trash/Blazor.git
-git push -u origin main
-```
-
 ## set main branch
 - i think before 2022 it was master but it was changed to main
 
